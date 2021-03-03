@@ -5,12 +5,14 @@ module cube_basic(tx, ty, tz, cx, cy, cz){
 	}	
 }
 
+px=3;
+py=5;
 difference(){
 	//土台部分
 	hull(){
 		cube_basic(0, 0, 3, 3.5, 10, 0.05);
 	    linear_extrude(0.5){
-			polygon(points=[[-3, 5], [-2, 7], [2, 7], [3, 5], [3, -5], [2, -7], [-2, -7],, [-3, -5]]); //時計回り
+			polygon(points=[[-px, py], [-2, 7], [2, 7], [px, py], [px, -py], [2, -7], [-2, -7], [-px, -py]]); //時計回り
 		}
 	}
 	//空洞部分
