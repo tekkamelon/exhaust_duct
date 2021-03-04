@@ -1,5 +1,6 @@
 px=3;
-py=5;
+cube_basic_y=10;
+py=cube_basic_y/2;
 px2=2;
 py2=7;
 
@@ -13,13 +14,13 @@ module cube_basic(tx, ty, tz, cx, cy, cz){
 difference(){
 	//土台部分
 	hull(){
-		cube_basic(0, 0, 3, 3.5, 10, 0.05);
+		cube_basic(0, 0, 3, 3.5, cube_basic_y, 0.05);
 	    linear_extrude(0.25){
 			polygon(points=[[-px, py], [-px2, py2], [px2, py2], [px, py], [px, -py], [px2, -py2], [-2, -7], [-px, -py]]); //時計回り
 		}
 	}
 	//空洞部分
-	cube_basic(0, 0, 3, 3, 9.5, 3.5);
+	cube_basic(0, 0, 3, px, cube_basic_y-0.5, 3.5);
 }
 
 //フィン部分
