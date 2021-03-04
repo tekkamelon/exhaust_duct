@@ -1,3 +1,8 @@
+px=3;
+py=5;
+px2=2;
+py2=7;
+
 //cubeの基本部分
 module cube_basic(tx, ty, tz, cx, cy, cz){
 	translate([tx, ty, tz]){
@@ -5,14 +10,12 @@ module cube_basic(tx, ty, tz, cx, cy, cz){
 	}	
 }
 
-px=3;
-py=5;
 difference(){
 	//土台部分
 	hull(){
 		cube_basic(0, 0, 3, 3.5, 10, 0.05);
-	    linear_extrude(0.5){
-			polygon(points=[[-px, py], [-2, 7], [2, 7], [px, py], [px, -py], [2, -7], [-2, -7], [-px, -py]]); //時計回り
+	    linear_extrude(0.25){
+			polygon(points=[[-px, py], [-px2, py2], [px2, py2], [px, py], [px, -py], [px2, -py2], [-2, -7], [-px, -py]]); //時計回り
 		}
 	}
 	//空洞部分
