@@ -1,10 +1,10 @@
-px=3;
-cube_basic_x=px+0.5;
-cube_basic_y=10;
-py=cube_basic_y/2;
-px2=2;
-py2=py+2;
-fy=py-1;
+px=3; //横幅のx軸の座標
+cube_basic_x=px+0.5; //ダクト内部の厚み
+cube_basic_y=10; //全長
+py=cube_basic_y/2; //横幅のy軸の頂点
+px2=2; //縦幅のx軸の頂点
+py2=py+2; //縦幅のy軸の頂点
+fy=py-1; //フィン部分のy軸座標
 
 //cubeの基本部分
 module cube_basic(tx, ty, tz, cx, cy, cz){
