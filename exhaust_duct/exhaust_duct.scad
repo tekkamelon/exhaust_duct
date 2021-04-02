@@ -29,7 +29,7 @@ difference(){
 //フィン部分
 for(y=[-fy:1:fy]){
 	hull(){
-		cube_basic(0, y, 2.5, px, 0.25, 0.5);
-		cube_basic(0, y, 1.0, px, 0.65, 0.5);
+		cube_basic(0, y, 2.5, px, 0.25, 0.5); //上部
+		cube_basic(0, y, 1.0, px, 0.55, 0.5); //下部
 	}
 }
