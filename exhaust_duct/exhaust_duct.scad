@@ -1,4 +1,4 @@
-px=3; //横幅のx軸の座標
+px=3.5; //横幅のx軸の座標
 cube_basic_x=px+0.5; //ダクト内部の厚み
 cube_basic_y=10; //全長
 py=cube_basic_y/2; //横幅のy軸の頂点
